@@ -43,8 +43,7 @@ public class DBHelper {
             val statusSt = connection.createStatement();
             try (val rs = statusSt.executeQuery(statusSql)) {
                 if (rs.next()) {
-                    val status = rs.getString(1);
-                    return status;
+                    return rs.getString(1);
                 }
                 return null;
             }
@@ -61,8 +60,7 @@ public class DBHelper {
         ) {
             try (val rs = statusSt.executeQuery(statusSql)) {
                 if (rs.next()) {
-                    val status = rs.getString(1);
-                    return status;
+                    return rs.getString(1);
                 }
                 return null;
             }

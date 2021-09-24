@@ -4,6 +4,8 @@ ru/netology/date/DataHelper.java
  ru.netology.date.DataHelper
 ru/netology/page/MainPage.java
  ru.netology.page.MainPage
+ru/netology/test/TestBuyWithCredit.java
+ ru.netology.test.TestBuyWithCredit
 ru/netology/date/DBHelper.java
  ru.netology.date.DBHelper
 ru/netology/test/TestBuy.java

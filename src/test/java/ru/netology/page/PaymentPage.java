@@ -17,7 +17,7 @@ public class PaymentPage {
     private SelenideElement fieldCvc = $("[placeholder='999']");
     private SelenideElement buttonContinue = $$("[class='button button_view_extra button_size_m button_theme_alfa-on-white']").get(1);
     private SelenideElement bankApproved = $(withText("Операция одобрена Банком."));
-    private SelenideElement bankRefusal = $(withText("Ошибка! Банк отказал в проведении операции."));
+    private SelenideElement errorBankRefusal = $(withText("Ошибка! Банк отказал в проведении операции."));
     private SelenideElement errorFormat = $(withText("Неверный формат"));
     private SelenideElement invalidDurationCard = $(withText("Неверно указан срок действия карты"));
     private SelenideElement cardExpired = $(withText("Истёк срок действия карты"));
@@ -36,15 +36,14 @@ public class PaymentPage {
         bankApproved.should(Condition.visible, Duration.ofSeconds(15));
     }
 
-    public void expectRejectionFromBank(){
-        bankRefusal.shouldBe(Condition.visible, Duration.ofSeconds(15));
+    public void expectRejectionFromBank(){errorBankRefusal.shouldBe(Condition.visible, Duration.ofSeconds(15));
     }
 
     public void waitInvalidFormat(){
         errorFormat.shouldBe(Condition.visible);
     }
 
-    public void waitNecessaryFillOutField(){
+    public void waitSureFillOutField(){
         requiredField.shouldBe(Condition.visible);
     }
 
@@ -55,5 +54,6 @@ public class PaymentPage {
     public void waitInvalidYear(){
         cardExpired.shouldBe(Condition.visible);
     }
+
 
 }

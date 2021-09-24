@@ -5,8 +5,10 @@ import com.github.javafaker.Faker;
 import java.util.Locale;
 
 public class DataHelper {
-    private Faker fakerEn = new Faker(new Locale("en"));
-    private Faker fakerRu = new Faker(new Locale("ru"));
+    private static Faker fakerEn = new Faker(new Locale("en"));
+    private static Faker fakerRu = new Faker(new Locale("ru"));
+    private DataHelper() {
+    }
 
     public static String getValidCardNumber() {
         return "4444 4444 4444 4441";
@@ -16,19 +18,19 @@ public class DataHelper {
         return "APPROVED";
     }
 
-    public String getInvalidCardStatus () {
+    public static String getInvalidCardStatus() {
         return "DECLINED";
     }
 
-    public String getInvalidCardNumber () {
+    public static String getInvalidCardNumber() {
         return "4444 4444 4444 4442";
     }
 
-    public String getEmptyCardNumber () {
+    public static String getEmptyCardNumber() {
         return "                ";
     }
     
-    public String getRandomCardNumber () {
+    public static String getRandomCardNumber() {
         return fakerEn.business().creditCardNumber();
     }
 
@@ -36,11 +38,11 @@ public class DataHelper {
         return "08";
     }
 
-    public String getInValidMonth () {
-        return "00";
+    public static String getInValidMonth() {
+        return "15";
     }
 
-    public String getEmptyMonth () {
+    public static String getEmptyMonth() {
         return "  ";
     }
 
@@ -48,35 +50,35 @@ public class DataHelper {
         return "22";
     }
 
-    public String getInvalidYear () {
+    public static String getInvalidYear() {
         return "15";
     }
 
-    public String getEmptyYear () {
-        return "00";
+    public static String getEmptyYear() {
+        return " ";
     }
 
     public static String getCardHolder() {
         return "Vasya Ivanov";
     }
 
-    public String getNotCardHolder() {
+    public static String getRandomCardHolder() {
         return fakerRu.name().fullName();
     }
 
-    public String getEmptyCardHolder () {
-        return "";
+    public static String getEmptyCardHolder() {
+        return " ";
     }
 
     public static String getValidCVC() {
         return "999";
     }
 
-    public String getInvalidCVC() {
+    public static String getInvalidCVC() {
         return "234";
     }
 
-    public String getEmptyCVC () {
+    public static String getEmptyCVC() {
         return "   ";
     }
 }

@@ -1,5 +1,6 @@
 # Дипломный проект по курсу «Тестировщик ПО»
-[План дипломного проекта](https://github.com/AnastasiaMR/Diplom/blob/master/Plan.md)
+[План дипломного проекта](https://github.com/AnastasiaMR/Diplom/blob/master/Plan.md) 
+
 [Отчет по тестированию](https://github.com/AnastasiaMR/Diplom/blob/master/Report.md)
 
 ## Запуск автотестов
